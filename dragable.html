@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <style type="text/css">
+    
+
+  </style>
+</head>
+<body>
+    <div style="height: 100px; width: 100px; background-color: cadetblue;">Hello...</div><br><hr>
+    <div style="height: 100px; width: 100px; background-color: cadetblue;">This Is My Home And I Can Move Within It Only</div><br><hr>
+    <div style="height: 100px; width: 100px; background-color: cadetblue;"> I Can Move Only Horizontaly</div><br><hr>
+    <div style="height: 100px; width: 100px; background-color: cadetblue;"> I Can Move Only Vertically</div><br><hr>
+    <div style="height: 100px; width: 100px; background-color: cadetblue;">I Can Move Only After 3 Sec</div><br><hr>
+    <div style="height: 100px; width: 500px; background-color: cadetblue;"> I Can Move Only After 200px</div><br><hr>
+   
+        <script type="text/javascript">
+        $(document).ready(function (){
+            $( "#MyDiv").draggable();
+            $("#MyHomeDiv span").draggble({
+                containment: "#MyHomeDiv"
+            });
+            $("#MyHorizontalDiv span").draggable({
+                axis:"x"
+            });
+            $("#MyVerticalDiv span").draggable({
+                axis:"y"
+            });
+            $("#MyFiftyPixelDiv span").draggable({
+                distance:200
+            });
+            $("#MyThreeSecondsDelay")
+        })
+    </script>
+   
+</body>
+</html>
